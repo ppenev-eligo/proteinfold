@@ -30,7 +30,7 @@ process RUN_BOLTZ {
     tuple val(meta), path ("boltz_results_*/predictions/*/pae_*model_0.npz")    , emit: pae
     tuple val(meta), path ("${meta.id}_plddt.tsv")                              , emit: plddt_raw
     tuple val(meta), path ("${meta.id}_msa.tsv")                                , optional: true, emit: msa_raw
-    tuple val(meta), path ("${meta.id}_*_pae.tsv")                              , optional: true, emit: pae_raw
+    tuple val(meta), path ("${meta.id}_*_pae.tsv")                              , emit: pae_raw
     tuple val(meta), path ("${meta.id}_ptm.tsv")                                , emit: ptm_raw
     tuple val(meta), path ("${meta.id}_iptm.tsv")                               , optional: true, emit: iptm_raw
     tuple val(meta), path ("${meta.id}_chainwise_ptm.tsv")                      , emit: summary_chainwise_ptm_raw
